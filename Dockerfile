@@ -5,6 +5,7 @@ RUN  apt-get update -q \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /root/.cache /home/*/.cache \
   && apt-get upgrade -q \
+  && apt-get update -y \
   && apt-get install -y \
      curl \
      rsync \
