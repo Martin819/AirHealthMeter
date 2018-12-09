@@ -23,5 +23,4 @@ RUN apt-get update -y \
      zlib1g-dev \
      iputils-ping \
   && apt-get clean \
-  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /root/.cache /home/*/.cache \
-
+  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /root/.cache /home/*/.cache
