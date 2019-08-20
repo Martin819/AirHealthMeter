@@ -22,5 +22,10 @@ RUN apt-get update -y \
      gnupg2 \
      zlib1g-dev \
      iputils-ping \
+     i2c-tools \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /root/.cache /home/*/.cache
+
+RUN git clone https://github.com/Martin819/AirHealthMeter.git /root/AirHealthMeter
+
+ENTRYPOINT ["bash", "/root/AirHealthMeter/scripts/start.sh"]
